@@ -38,7 +38,7 @@ jobs:
 
       - name: Build
         run: |
-          ./gradlew distTar distZip
+          ./gradlew distTar distZip --no-daemon
 
           export tar_file=$(ls ./build/distributions/ | grep tar)
           export zip_file=$(ls ./build/distributions/ | grep zip)

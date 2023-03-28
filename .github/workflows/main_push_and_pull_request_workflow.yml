@@ -23,7 +23,7 @@ jobs:
           distribution: 'temurin'
           cache: gradle
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew build --no-daemon
   integration-test:
     strategy:
       matrix:
@@ -40,5 +40,5 @@ jobs:
           distribution: 'temurin'
           cache: gradle
       - name: Build with Gradle
-        run: ./gradlew build integrationTest
+        run: ./gradlew build integrationTest --no-daemon
 
